@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "retro-games-api"
+version = "0.1.0"
+description = "Sistema de Catálogo de Jogos Retro"
+authors = ["Developer <dev@example.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+pydantic = "^2.5.0"
+jinja2 = "^3.1.2"
+python-multipart = "^0.0.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
