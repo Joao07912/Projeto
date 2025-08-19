@@ -29,6 +29,12 @@ A **Retro Games API** é uma aplicação web desenvolvida em Python que permite 
 ```bash
 # Windows (PowerShell)
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
+
+# Linux/macOS
+curl -sSL https://install.python-poetry.org | python3 -
+
+# Ou via pip
+pip install poetry
 ```
 
 ## 🚀 Instalação e Configuração
