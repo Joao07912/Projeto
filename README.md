@@ -23,12 +23,6 @@ A **Retro Games API** é uma aplicação web desenvolvida em Python que permite 
 - **[Uvicorn](https://uvicorn.org)** - Servidor ASGI de alta performance
 - **[Requests](https://requests.readthedocs.io)** - Cliente HTTP para testes
 
-## 📦 Pré-requisitos
-
-Antes de começar, certifique-se de ter instalado:
-
-- **Python 3.8 ou superior** ([Download](https://python.org/downloads))
-- **Poetry** (gerenciador de dependências)
 
 ### Instalando o Poetry
 
@@ -47,7 +41,7 @@ pip install poetry
 
 ### 1. Clone o Repositório
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/Joao07912/Projeto
 cd retro-games-api
 ```
 
