@@ -214,3 +214,4 @@ git commit -m "resolve: descrição do conflito resolvido"
 
 Este projeto está sob a licença MIT. Veja o arquivo GIOVANA É LINDA para mais detalhes.
 
+
