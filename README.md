@@ -23,6 +23,12 @@ A **Retro Games API** é uma aplicação web desenvolvida em Python que permite 
 - **[Uvicorn](https://uvicorn.org)** - Servidor ASGI de alta performance
 - **[Requests](https://requests.readthedocs.io)** - Cliente HTTP para testes
 
+## 📦 Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado:
+
+- **Python 3.8 ou superior** ([Download](https://python.org/downloads))
+- **Poetry** (gerenciador de dependências)
 
 ### Instalando o Poetry
 
@@ -41,7 +47,7 @@ pip install poetry
 
 ### 1. Clone o Repositório
 ```bash
-git clone https://github.com/Joao07912/Projeto
+git clone <url-do-repositorio>
 cd retro-games-api
 ```
 
@@ -63,155 +69,49 @@ poetry shell
 
 ### Método 1: Script Automatizado (Recomendado)
 ```bash
-# Windows
-run_simple.bat
-
-# Ou manualmente
-python build.py
+executar.bat
 ```
 
-### Método 2: Poetry
+### Opção 2: Comandos manuais
 ```bash
-# Iniciar servidor de desenvolvimento
-poetry run uvicorn retro_games.main:app --reload
+# Compilar
+mvn compile
 
-# Ou usando o script personalizado
-poetry run start
+# Executar
+mvn exec:java -Dexec.mainClass="Calculadora"
+
+# Executar testes
+mvn test
 ```
 
-### Método 3: Python Direto
+### Opção 3: Executar testes
 ```bash
-# Após instalar dependências com pip
-python -m uvicorn retro_games.main:app --reload
+executar-testes.bat
 ```
 
-## 🌐 Acesso à Aplicação
+## 📚 O que você aprende:
 
-Após iniciar o servidor, acesse:
+1. **pom.xml** - Como configurar um projeto Maven
+2. **Calculadora.java** - Como escrever código Java
+3. **CalculadoraTest.java** - Como criar testes unitários
+4. **mvn compile** - Como compilar com Maven
+5. **mvn test** - Como executar testes
+6. **mvn exec:java** - Como executar com Maven
 
-- **🏠 API Base**: http://localhost:8000
-- **📚 Documentação Interativa (Swagger)**: http://localhost:8000/docs
-- **📖 Documentação Alternativa (ReDoc)**: http://localhost:8000/redoc
+## 🧪 Testes Unitários:
 
-## 🔧 Build e Distribuição
+**8 testes criados:**
+- ✅ **4 Testes Positivos**: Dados válidos que o sistema espera
+- ❌ **4 Testes Negativos**: Dados inválidos que causam erros
 
-### Build Automatizado
+**Executar testes:**
 ```bash
-# Executa instalação, testes e build
-python build.py
-```
-
-### Build Manual
-```bash
-# Gerar pacote distribuível
-poetry build
-
-# Arquivos gerados em: dist/
-# - retro_games_api-1.0.0.tar.gz (código fonte)
-# - retro_games_api-1.0.0-py3-none-any.whl (wheel)
-```
-
-## 🧪 Testes
-
-### Executar Testes Automatizados
-```bash
-# Testar todos os endpoints
-python test_api.py
-
-# Com Poetry
-poetry run python test_api.py
-```
-
-### Teste Manual via Swagger
-1. Acesse http://localhost:8000/docs
-2. Explore e teste os endpoints interativamente
-
-## 📡 Endpoints da API
-
-| Método | Endpoint | Descrição |
-|--------|----------|----------|
-| `GET` | `/` | Informações gerais e estatísticas |
-| `POST` | `/games/` | Adicionar novo jogo |
-| `GET` | `/games/` | Listar jogos (com filtros) |
-| `GET` | `/games/{id}` | Obter jogo específico |
-| `PUT` | `/games/{id}` | Atualizar/avaliar jogo |
-| `DELETE` | `/games/{id}` | Remover jogo |
-| `GET` | `/stats` | Estatísticas detalhadas |
-
-### Filtros Disponíveis
-- `?platform=Arcade` - Filtrar por plataforma
-- `?genre=Ação` - Filtrar por gênero
-- `?favorites_only=true` - Apenas favoritos
-
-## 🎮 Plataformas e Gêneros
-
-### Plataformas Suportadas
-- Arcade
-- Nintendo (NES)
-- Super Nintendo (SNES)
-- Sega Genesis
-- Atari 2600
-- Game Boy
-- PlayStation 1
-
-### Gêneros Disponíveis
-- Ação
-- Aventura
-- RPG
-- Plataforma
-- Puzzle
-- Corrida
-- Luta
-- Tiro
-
-## 📊 Exemplo de Uso
-
-```python
-import requests
-
-# Adicionar novo jogo
-game_data = {
-    "title": "Street Fighter II",
-    "platform": "Arcade",
-    "genre": "Luta",
-    "year": 1991,
-    "description": "Clássico jogo de luta da Capcom"
-}
-
-response = requests.post("http://localhost:8000/games/", json=game_data)
-print(response.json())
-```
-
-## 🤝 Contribuição
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -am 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
-
-### 🔧 Resolução de Conflitos
-
-Este projeto já passou por situações de conflito de merge que foram resolvidas com sucesso:
-
-**Conflito Resolvido**: Configuração do servidor
-- **Situação**: Dois desenvolvedores alteraram a mesma linha de configuração do uvicorn
-- **Resolução**: Combinamos as melhores práticas de ambas as alterações
-- **Resultado**: Servidor configurado com host local, reload ativo e debug habilitado
-
-**Como resolver conflitos**:
-```bash
-git checkout main
-git pull origin main
-git checkout sua-branch
-git merge main
-# Resolver conflitos manualmente
-git add .
-git commit -m "resolve: descrição do conflito resolvido"
+executar-testes.bat
+# ou
+mvn test
 ```
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo GIOVANA É LINDA para mais detalhes.
-
+Este projeto está sob a licença MIT. Veja o arquivo JOÃO VICTOR para mais detalhes.
 
