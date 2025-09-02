@@ -1,32 +1,73 @@
-# 🧮 Calculadora Java + Maven
+# 🎮 Retro Games API
 
-> Projeto **MAIS SIMPLES POSSÍVEL** para aprender Java com Maven
+> API REST moderna para catálogo de jogos retro com sistema de avaliações e favoritos
 
-## 📁 O que tem no projeto:
+## 📋 Descrição do Projeto
 
+A **Retro Games API** é uma aplicação web desenvolvida em Python que permite gerenciar um catálogo completo de jogos clássicos. O sistema oferece funcionalidades para cadastrar, avaliar, favoritar e filtrar jogos de diferentes plataformas retro, desde Arcade até consoles como NES, SNES e PlayStation 1.
+
+### Principais Características:
+- 🎯 **CRUD Completo**: Criar, listar, atualizar e remover jogos
+- 🔍 **Filtros Avançados**: Por plataforma, gênero e favoritos
+- ⭐ **Sistema de Avaliação**: Notas de 0 a 10 para cada jogo
+- 📊 **Estatísticas**: Relatórios detalhados do catálogo
+- 🚀 **API REST**: Documentação automática com Swagger/OpenAPI
+- ✅ **Validação**: Dados validados automaticamente com Pydantic
+
+## 🛠️ Tecnologias Utilizadas
+
+- **[Python 3.8+](https://python.org)** - Linguagem de programação
+- **[FastAPI](https://fastapi.tiangolo.com)** - Framework web moderno e rápido
+- **[Poetry](https://python-poetry.org)** - Gerenciador de dependências e build
+- **[Pydantic](https://pydantic.dev)** - Validação de dados com type hints
+- **[Uvicorn](https://uvicorn.org)** - Servidor ASGI de alta performance
+- **[Requests](https://requests.readthedocs.io)** - Cliente HTTP para testes
+
+## 📦 Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado:
+
+- **Python 3.8 ou superior** ([Download](https://python.org/downloads))
+- **Poetry** (gerenciador de dependências)
+
+### Instalando o Poetry
+
+```bash
+# Windows (PowerShell)
+(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
+
+# Linux/macOS
+curl -sSL https://install.python-poetry.org | python3 -
+
+# Ou via pip
+pip install poetry
 ```
-calculadora/
-├── src/main/java/
-│   └── Calculadora.java    ← Seu programa Java
-├── pom.xml                 ← Configuração do Maven
-├── executar.bat           ← Script para rodar
-└── README.md              ← Este arquivo
+
+## 🚀 Instalação e Configuração
+
+### 1. Clone o Repositório
+```bash
+git clone <url-do-repositorio>
+cd retro-games-api
 ```
 
-## 🎯 O que o programa faz:
+### 2. Instale as Dependências
+```bash
+# Instalar todas as dependências do projeto
+poetry install
 
-- **Menu interativo** para escolher operação
-- **Soma** dois números que você digita
-- **Subtrai** dois números que você digita
-- **Multiplica** dois números que você digita
-- **Divide** dois números que você digita
-- **Funciona com decimais** (1.5, 2.7, etc)
-- **Tratamento de erros** (divisão por zero, entrada inválida)
-- **Loop contínuo** - faça várias operações
+# Ou usando pip (alternativa)
+pip install -r requirements.txt
+```
 
-## 🚀 Como executar:
+### 3. Ative o Ambiente Virtual (Poetry)
+```bash
+poetry shell
+```
 
-### Opção 1: Script automático
+## ▶️ Execução
+
+### Método 1: Script Automatizado (Recomendado)
 ```bash
 executar.bat
 ```
@@ -70,11 +111,7 @@ executar-testes.bat
 mvn test
 ```
 
-## 🔧 Pré-requisitos:
+## 📄 Licença
 
-- Java 8 ou superior
-- Maven instalado
+Este projeto está sob a licença MIT. Veja o arquivo JOÃO VICTOR para mais detalhes.
 
----
-
-**É isso! Projeto Java + Maven mais simples que existe! 🎉**
